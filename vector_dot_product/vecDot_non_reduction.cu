@@ -1,6 +1,6 @@
 //This is practice code of using cuda to do vector dot product without reduction of array
 //Author: Zhaoyuan "Maxwell" Cui
-//May 19, 2017
+//May 30, 2017
 
 //Define certain parameters that will be used across the application
 # define N 100 //The size of the vector
