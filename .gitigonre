@@ -1,0 +1,10 @@
+#Ignore all
+*
+#Unigore all with extensions
+!*.*
+
+#Unigore all dirs
+!*/
+
+#Ignore all ~ file
+*~
