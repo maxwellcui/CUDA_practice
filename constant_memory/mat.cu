@@ -1,19 +1,22 @@
 #include<iostream>
 
 //#ifndef MATRIX_DIM
-#define MATRIX_DIM 5
+//#define MATRIX_DIM 5
 
 //__constant__ float d_mat[MATRIX_DIM][MATRIX_DIM];
 
 int main()
 {
+  int MATRIX_DIM=5;
+
   //Declare matrix on host
   float mat[MATRIX_DIM][MATRIX_DIM];
   std::cout<<"hi\n";
+
   //Initilize matrix
   for(int i=0;i<MATRIX_DIM;i++)
     {
-      for(int j=0;j<MATRIX_DIM;i++)
+      for(int j=0;j<MATRIX_DIM;j++)
 	{
 	  if(i==j)
 	    {
