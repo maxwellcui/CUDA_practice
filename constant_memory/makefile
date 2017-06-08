@@ -3,11 +3,13 @@
 NC=nvcc
 OBJS=mat.o
 
+mat : $(OBJS)
+	$(NC) -o $@ $^
+
 mat.o : mat.cu
 	$(NC) -c $^
 
-mat : $(OBJS)
-	$(NC) -o $@ $^
+
 .PHONY : clean
 clean:
 	rm $(OBJS)

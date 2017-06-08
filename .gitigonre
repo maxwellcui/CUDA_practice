@@ -6,3 +6,8 @@
 #Unigore all dirs
 !*/
 
+#Ignore object files
+*.o
+
+#Ignore ~ files
+*~
