@@ -7,7 +7,7 @@
 !*/
 
 #Ignore object files
-*.o
+*/*.o
 
 #Ignore ~ files
 *~
