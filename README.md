@@ -14,7 +14,7 @@ The GPU I am using is `Nvidia GeForce GTX 750 Ti`. More info can be found in [(â
 ## Resources
 > [CUDA Toolkit Download](https://developer.nvidia.com/cuda-downloads)
 >
-> [A useful page that helps on installing CUDA on Ubuntu 14.04 LTS](https://askubuntu.com/questions/451672/installing-and-testing-cuda-in-ubuntu-14-04)
+> [A useful page that helps install CUDA on Ubuntu 14.04 LTS](https://askubuntu.com/questions/451672/installing-and-testing-cuda-in-ubuntu-14-04)
 >
 > [CUDA C Best Practices Guide](http://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#axzz4hZHAX7Yc)
 >
