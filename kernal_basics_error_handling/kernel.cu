@@ -19,7 +19,7 @@
 __global__ void kernel(float *A, float *B, float *C)
 {
   int i;
-  i=threadIdx.x;
+  i=blockIdx.x*blockDim.x+threadIdx.x;
   C[i]=A[i]+B[i];
   printf("A: %f B:%f C:%f\n",A[i],B[i],C[i]);
 }
