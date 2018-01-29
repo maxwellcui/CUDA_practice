@@ -21,6 +21,7 @@ __global__ void kernel(int *A, int *B, int *C)
   int i;
   i=threadIdx.x;
   C[i]=A[i]+B[i];
+  printf("A: %f B:%f C:%f\n",A[i],B[i],C[i]);
 }
 
 int main()
