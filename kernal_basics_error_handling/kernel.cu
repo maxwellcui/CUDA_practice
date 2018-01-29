@@ -16,7 +16,7 @@
     }\
 }\
 
-__global__ void kernel(int *A, int *B, int *C)
+__global__ void kernel(float *A, float *B, float *C)
 {
   int i;
   i=threadIdx.x;
