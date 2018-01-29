@@ -58,6 +58,7 @@ int main()
     {
       if(h_C[i]!=3)
       {
+	printf("%f.\n",h_C[i]);
 	printf("Calculation error!\n");
 	exit(1);
       }

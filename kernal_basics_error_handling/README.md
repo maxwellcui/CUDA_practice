@@ -30,15 +30,15 @@ The result from the GPU can be verified by comparing it with the result from the
 ## Error handling
 Most of the CUDA runtime API has return type of `cudaError_t` (at least in my knowledge), so we can define a macro handle the error.
 ```c
-#define CHECK(call)
-{
-	const cudaError_t error=call;
-	if(error!=cudaSuccess)
-	{
-		printf("Error: %s:%d, ", __FILE__, __LINE__);
-		printf("code:%d, reason: %s\n",error,cudaGetErrorString(error));
-		exit(1);
-	}
+#define CHECK(call)\
+{\
+	const cudaError_t error=call;\
+	if(error!=cudaSuccess)\
+	{\
+		printf("Error: %s:%d, ", __FILE__, __LINE__);\
+		printf("code:%d, reason: %s\n",error,cudaGetErrorString(error));\
+		exit(1);\
+	}\
 }
 ```
 In case you are not familiar with Macro just like I was,`__FILE__` returns the file which is being executed and `__LINE__` returns the line that the program is being executed. Besides these to, `__func__` is also available.
