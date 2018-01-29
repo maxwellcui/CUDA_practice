@@ -44,9 +44,9 @@ int main()
   CHECK(cudaMalloc(&d_B,size));
   CHECK(cudaMalloc(&d_C,size));
 
-  CHECK(cudaMemcoy(d_A,h_A,size,cudaMemcpyHostToDevice));
-  CHECK(cudaMemcoy(d_B,h_B,size,cudaMemcpyHostToDevice));
-  CHECK(cudaMemcoy(d_C,h_C,size,cudaMemcpyHostToDevice));
+  CHECK(cudaMemcpy(d_A,h_A,size,cudaMemcpyHostToDevice));
+  CHECK(cudaMemcpy(d_B,h_B,size,cudaMemcpyHostToDevice));
+  CHECK(cudaMemcpy(d_C,h_C,size,cudaMemcpyHostToDevice));
   
   dim3 block (10);
   dim3 grid ((nElm+block.x-1)/block.x);
@@ -56,7 +56,7 @@ int main()
 
   for(int i=0;i<nElm;i++)
     {
-      if(h_C[i]!=3}
+      if(h_C[i]!=3)
       {
 	printf("Calculation error!\n");
 	exit(1);
