@@ -16,7 +16,7 @@
     }
 }
 
-__global__ kernel(int *A, int *B, int *C)
+__global__ void kernel(int *A, int *B, int *C)
 {
   int i;
   i=threadIdx.x;
