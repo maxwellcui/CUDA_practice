@@ -40,7 +40,7 @@ int main()
       h_C[i]=0;
     }
 
-  int *d_A,*d_B,*d_C;
+  float *d_A,*d_B,*d_C;
   CHECK(cudaMalloc(&d_A,size));
   CHECK(cudaMalloc(&d_B,size));
   CHECK(cudaMalloc(&d_C,size));
