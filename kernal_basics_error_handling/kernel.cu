@@ -1,3 +1,4 @@
+//
 //This is a code for the kernel basics and also the error handling
 //Author: Zhaoyuan "Maxwell" Cui
 
@@ -50,7 +51,7 @@ int main()
   dim3 block (10);
   dim3 grid ((nElm+block.x-1)/block.x);
 
-  CHECK(kernel<<<grid,block>>>(d_A,d_B,d_C));
+  kernel<<<grid,block>>>(d_A,d_B,d_C);
   CHECK(cudaMemcpy(h_C,d_C,size,cudaMemcpyDeviceToHost));
 
   for(int i=0;i<nElm;i++)
@@ -61,6 +62,14 @@ int main()
 	exit(1);
       }
     }
+
+  free(h_A);
+  free(h_B);
+  free(h_C);
+
+  cudaFree(d_A);
+  cudaFree(d_B);
+  cudaFree(d_C);
   
   return 0;
   
