@@ -5,16 +5,16 @@
 #include<cuda_runtime.h>
 #include<stdio.h>
 
-#define CHECK(call)
-{
-  const cudaError_t error=call;
-  if(error!=cudaSuccess)
-    {
-      printf("Error: %s:%d, ", __FILE__, __LINE__);
-      printf("code:%d, reason: %s\n",error,cudaGetErrorString(error));
-      exit(1);
-    }
-}
+#define CHECK(call)\
+{\
+  const cudaError_t error=call;\
+  if(error!=cudaSuccess)\
+    {\
+      printf("Error: %s:%d, ", __FILE__, __LINE__);\
+      printf("code:%d, reason: %s\n",error,cudaGetErrorString(error));\
+      exit(1);\
+    }\
+}\
 
 __global__ void kernel(int *A, int *B, int *C)
 {
@@ -26,11 +26,11 @@ __global__ void kernel(int *A, int *B, int *C)
 int main()
 {
   int nElm=100;
-  int *h_A, *h_B, *h_C;
+  float *h_A, *h_B, *h_C;
   int size=nElm*sizeof(float);
-  h_A=malloc(size);
-  h_B=malloc(size);
-  h_C=malloc(size);
+  h_A=(float*)malloc(size);
+  h_B=(float*)malloc(size);
+  h_C=(float*)malloc(size);
 
   for(int i=0;i<nElm;i++)
     {
