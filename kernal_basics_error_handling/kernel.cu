@@ -21,7 +21,6 @@ __global__ void kernel(float *A, float *B, float *C)
   int i;
   i=blockIdx.x*blockDim.x+threadIdx.x;
   C[i]=A[i]+B[i];
-  printf("A: %f B:%f C:%f\n",A[i],B[i],C[i]);
 }
 
 int main()
@@ -59,10 +58,11 @@ int main()
     {
       if(h_C[i]!=3)
       {
-	printf("%f.\n",h_C[i]);
 	printf("Calculation error!\n");
 	exit(1);
       }
+      else
+	printf("Success!\n");
     }
 
   free(h_A);
