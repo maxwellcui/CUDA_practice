@@ -7,7 +7,7 @@ in a same warp will execute the same instruction.
 
 ## Threads, block, and warp
 Since warp contains 32 threads, the number of warp in a block can be calculated by the following formula:
-![warp number](/home/maxwellcui/research/cuda_practice/warp/warp_number.png)
+![warp number](./warp_number.png)
 
 where ceil is the ceiling function. It's important to note that if the threads number in a block is not a even multiple of warp size, there will be threads in
 the block that stay inactive.
@@ -53,7 +53,7 @@ we are interested in the branch efficiency.
 nvprof --metrics branch_efficiency ./application
 ```
 The branch efficiency is calculated in the following way:
-![branch efficiency](/home/maxwellcui/research/cuda_practice/warp/branch_efficiency.png)
+![branch efficiency](./branch_efficiency.png)
 
 One can also use the `nvprof` tool to find the branch efficiency by typing:
 ```bash
