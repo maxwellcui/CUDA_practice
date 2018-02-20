@@ -15,3 +15,6 @@
 #Unignore makefile
 !makefile
 !Makefile
+
+#Ignore the following files in particular
+!/latency_hiding/EECS-2016-143.pdf
