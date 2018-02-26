@@ -31,9 +31,11 @@ There are two types of instructions:
 
 ## Little's law
 The Little's law can be used to calculate the number of warps needed to achieve the latency hiding. The formula is
-$$\text{number of required warps}=\text{Latency} \times \text{Throughput}$$
+![littlesLaw](./littlesLaw.gif)
+
 or
-$$\text{mean concurrency}=\text{mean latency} \times \text{throughput}$$
+
+![littlesLaw2](./littlesLaw2.gif)
 
 ## Measurement metrics
 In the arithmetic operations, one looke at the instruction latency per clock cycle and throughput to calculate 
