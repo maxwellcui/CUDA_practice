@@ -1,5 +1,5 @@
 # Note
-This note focuses on the latency and latency hiding.
+This note focuses on the latency and latency hiding and occupancy.
 
 ## Latency and latency hiding
 <dl>
@@ -44,3 +44,21 @@ of warps.
 
 For the memory instructions, one look a the amount of data transferd in a unit time, which is the bandwidth. Then
 one can calculate the concurrency in terms of the memory operation or the number of warps.
+
+## Occupancy
+<dl>
+	<dt>Occupancy</dt>
+	<dd>
+		is the ratio of active warps to maximum number of warps, per SM.
+	</dd>
+</dl>
+![occupancy](./occupancy.gif)
+
+In order to keep a high occupancy, the number of threads per block and number of blocks need to be optimized,
+such that the block is not too small to leverage the resources nor too large to have enough resourses for each
+thread. 
+
+Guidelines:
+1. Thread number per block should always be an interger multiply of the warp size
+2. Avoid small block size: begin with 128 or 256
+3. Keep the number of blocks much larger than the number of SMs.
