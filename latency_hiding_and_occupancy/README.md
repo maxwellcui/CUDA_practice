@@ -52,6 +52,7 @@ one can calculate the concurrency in terms of the memory operation or the number
 		is the ratio of active warps to maximum number of warps, per SM.
 	</dd>
 </dl>
+
 ![occupancy](./occupancy.gif)
 
 In order to keep a high occupancy, the number of threads per block and number of blocks need to be optimized,
