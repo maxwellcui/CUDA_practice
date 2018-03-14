@@ -55,7 +55,7 @@ nvprof --metrics branch_efficiency ./application
 The branch efficiency is calculated in the following way:
 ![branch efficiency](./branch_efficiency.png)
 
-One can also use the `nvprof` tool to find the branch efficiency by typing:
+One can also use the `nvprof` tool to find the divergent branch by typing:
 ```bash
 nvprof --events branch,divergent_branch ./application
 ```
