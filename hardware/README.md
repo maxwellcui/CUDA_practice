@@ -28,3 +28,21 @@ I know, this is a piece of antiques in 2018.
 
 **Fermi chip block**
 ![Fermi architecture](fermi_arch.png)
+
+### Maxwell architecture
+**Maxwell SM (SMM)**
+
+![Maxwell_sm](./maxwell_sm.png)
+
+- First generation: GM107 (My GTX 750Ti is based on GM107)
+- Second generation: GM204 (ex. GTX 980)
+
+
+| Contents           | GM107  | Gm204  |
+|--------------------|--------|--------|
+| CUDA cores         | 640    | 2048   |
+| Compute capability | 5.0    | 5.2    |
+| Shared memory/SM   | 64kB   | 96kB   |
+| Register memory/SM | 256kB  | 256kB  |
+| Active blocks/SM   | 32     | 32     |
+| L2 Cache size      | 2048kB | 2048kB |
